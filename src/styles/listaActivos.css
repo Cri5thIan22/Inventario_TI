@@ -1,0 +1,70 @@
+.container-activos{
+    width: 100%;
+    height: 100vh;
+    padding: 80px 20px;
+    background-color: var(--color-6);
+}
+
+.container-activos h1{
+    color: var(--color-3);
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.lista{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+
+.activo{
+    padding: 10px 15px;
+    box-shadow: 0 0 10px var(--color-3);
+}
+
+.activo h1{
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.activo-informacion{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.activo-imagen img{
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+}
+
+.activo-detalles{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.activo-accion{
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.activo-accion a{
+    color: var(--color-2);
+    background-color: var(--color-6);
+    padding: 5px 8px;
+    transition: all 1s ease-in-out;
+    text-transform: none;
+    font-weight: 500;
+}
+
+.activo-accion a:hover{
+    color: var(--color-6);
+    background-color: var(--color-2);
+}

@@ -1,0 +1,45 @@
+.container-usuarios{
+    width: 100%;
+    height: 100vh;
+    padding: 80px 20px;
+    background-color: var(--color-6);
+}
+
+.container-usuarios h1{
+    color: var(--color-3);
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.usuario{
+    padding: 10px 15px;
+    box-shadow: 0 0 4px var(--color-3);
+}
+
+.informacion-usuario{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.usuario-accion{
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.usuario-accion a{
+    padding: 5px 15px;
+    color:var(--color-2);
+    background-color: var(--color-6);
+    transition: all .5s ease-in-out;
+    text-transform: none;
+    font-weight: 500;
+}
+
+.usuario-accion a:hover{
+    color: var(--color-4);
+    background-color: var(--color-2);
+}
