@@ -4,6 +4,7 @@ const ACTIVO_BASE_URL = "http://localhost:8080/api/v1/activo/todos";
 const URL_BASE = "http://localhost:8080/api/v1/activo"
 
 class activoService{
+    
     getAllService(){
         return axios.get(ACTIVO_BASE_URL);
     }
@@ -18,6 +19,11 @@ class activoService{
         return axios.get(URL_DETALLES_ACTIVO_ID);
     }
     
+    getUsuariosByActivoId(idActivo){
+        const URL_USUARIOS_ACTIVO_ID = `${URL_BASE}/${idActivo}/usuarios`;
+        return axios.get(URL_USUARIOS_ACTIVO_ID);
+    }
+
 }
 
 export default new activoService();

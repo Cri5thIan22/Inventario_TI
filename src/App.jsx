@@ -8,6 +8,7 @@ import HeaderSend from './Components/HeaderComponents.jsx'
 import { BodySend } from './Components/BodyComponents.jsx'
 import ActivosAsignados from './Components/ActivosAsignadosUsuario.jsx'
 import DetallesActivo from './Components/DetallesActivo.jsx'
+import UsuariosByActivoId from './Components/UsuariosByActivoId.jsx'
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
               <Route exact path='/usuarios' element={<ListaUsuario />}></Route>
               <Route path='/usuario/:usuarioId/activos' element={<ActivosAsignados />}></Route>
               <Route path='/activo/:activoId/detalles' element={<DetallesActivo />}></Route>
+              <Route path='/activo/:activoId/usuarios' element={<UsuariosByActivoId />}></Route>
             </Routes>
           </div>
         </BrowserRouter>

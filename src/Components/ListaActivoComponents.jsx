@@ -66,7 +66,6 @@ export const ListaActivo = () => {
                                     </div>
                                     <div className="activo-accion">
                                         <Link to={`/activo/${activo.id}/detalles`}>Especificaciones</Link>
-                                        <Link>Asignacion</Link>
                                         <Link>Informes</Link>
                                     </div>
                                 </div>

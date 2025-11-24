@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ActivoService from "../Services/ActivoService";
+import { Link } from "react-router-dom";
 import '../styles/detallesActivo.css'
 
 const obtenerDetalleEspecifico = (detalles) => {
@@ -30,12 +31,12 @@ const VistaEspecificaciones = ({ tipo, datos }) => {
         case "CPU":
             return (
                 <div className="detalle detalle-cpu">
-                    {/* Sugerencia: Agrega etiquetas <strong> para saber qué es cada dato */}
                     <p>Estado: {datos.estadoActivo}</p>
                     <p>Sistema: {datos.sistema}</p>
                     <p>Procesador: {datos.procesador}</p>
                     <p>Almacenamiento: {datos.almacenamiento}</p>
                     <p>RAM: {datos.ram}</p>
+                    <p>Edad del Equipo: {datos.edadEquipo}  </p>
                 </div>
             );
         case "PANTALLA":
@@ -55,6 +56,7 @@ const VistaEspecificaciones = ({ tipo, datos }) => {
                     <p>Disco: {datos.almacenamiento}</p>
                     <p>RAM: {datos.ram}</p>
                     <p>Serie: {datos.serie}</p>
+                    <p>Edad del Equipo: </p>
                 </div>
             );
         case "IMPRESORA":
@@ -145,6 +147,7 @@ export const DetallesActivo = () => {
                         tipo={tipoActivo} 
                         datos={detalleEspecifico} 
                     />
+                <Link to={`/activo/${activoId}/usuarios`}>Asignacion</Link>
             </div>
         </div>
     );
