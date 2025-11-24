@@ -44,19 +44,19 @@ export const HeaderSend = () => {
                         <img src={Etul4sa} alt="" />
                     </li>
                     <li>
-                        <Link to="/">Bienvenido</Link>
+                        <Link className="header-link" to="/">Bienvenido</Link>
                     </li>
                     <li>
-                        <Link to="/usuarios">Usuarios</Link>
+                        <Link className="header-link" to="/usuarios">Usuarios</Link>
                     </li>
                     <li>
-                        <Link to="/activos">Activos</Link>
+                        <Link className="header-link" to="/activos">Activos</Link>
                     </li>
                     <li>
-                        <Link to="/detalles">Detalles</Link>
+                        <Link className="header-link" to="/detalles">Detalles</Link>
                     </li>
                     <li>
-                        <Link to="/registrate">Regístrate</Link>
+                        <Link className="header-link" to="/registrate">Regístrate</Link>
                     </li>
                 </ul>
             </nav>

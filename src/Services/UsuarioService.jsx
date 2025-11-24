@@ -6,6 +6,7 @@ class usuarioService {
     getAllService(){
         return axios.get(USUARIO_BASE_URL);
     }
+
 }
 
 export default new usuarioService();

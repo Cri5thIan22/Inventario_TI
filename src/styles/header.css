@@ -56,7 +56,7 @@ li{
     padding: 8px 10px;
 }
 
-a{
+.header-link{
     padding: 5px 10px;
     font-size: 14px;
     color: var(--color-4);
@@ -68,7 +68,7 @@ a{
     align-items: center;
 }
 
-a::after{
+.header-link::after{
     content: '';
     position: absolute;
     bottom: 0;
@@ -81,7 +81,7 @@ a::after{
     border-radius: 10px;
 }
 
-a:hover::after{
+.header-link:hover::after{
     height: 100%; 
 }
 

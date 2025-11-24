@@ -9,12 +9,18 @@
 }
 
 .usuarios{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
     align-items: center;
+    gap: 15px;
 }
 
 .datos-usuario{
     display: flex;
     flex-direction: column;
     gap: 10px;
+    background-color: var(--color-2);
+    color: var(--color-6);
+    padding: 15px;
+    box-shadow: 5px 10px 5px 0 rgba(0, 0, 0, .7);
 }

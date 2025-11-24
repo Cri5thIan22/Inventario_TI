@@ -147,7 +147,7 @@ export const DetallesActivo = () => {
                         tipo={tipoActivo} 
                         datos={detalleEspecifico} 
                     />
-                <Link to={`/activo/${activoId}/usuarios`}>Asignacion</Link>
+                <Link to={`/activo/${activoId}/usuarios`}>Ver Usuarios Asignados</Link>
             </div>
         </div>
     );
