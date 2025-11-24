@@ -12,24 +12,25 @@ const UsuariosByActivoId = () => {
     const [error, setError] = useState(null);
 
     useEffect(() => {
-        if(!activoId){
+        if (!activoId) {
             setCargando(false);
             return;
         }
 
         ActivoService.getUsuariosByActivoId(activoId).
-                      then(response => {setUsuarios(response.data);
-                      }).catch(err => {
-                        console.log("Error al cargar los usuarios del activo con ID:", err);
-                        setError(`No se pudieron cargar los usuarios del activo : ${activoId}`)
-                      })
-                      .finally(() => {
-                         setCargando(false);
-                      })
+            then(response => {
+                setUsuarios(response.data);
+            }).catch(err => {
+                console.log("Error al cargar los usuarios del activo con ID:", err);
+                setError(`No se pudieron cargar los usuarios del activo : ${activoId}`)
+            })
+            .finally(() => {
+                setCargando(false);
+            })
 
     }, [activoId]);
-    
-    if(cargando){
+
+    if (cargando) {
         return <div>Cargando los usuarios relacionados con este activo</div>
     }
 
@@ -40,22 +41,20 @@ const UsuariosByActivoId = () => {
                 usuarios.length === 0 ? (
                     <p>Este activo no tiene usuarios asignadors</p>
                 ) : (
-                    <ul>
+                    <div className="usuarios">
                         {
                             usuarios.map(usuario => {
                                 return (
-                                    <div className="usuarios">
-                                        <div key={usuario.id} className="datos-usuario">
-                                            <p>Id: {usuario.id}</p>
-                                            <p>Nombres: {usuario.nombres}</p>
-                                            <p>Apellidos: {usuario.apellidos}</p>
-                                            <p>Area: {usuario.area.areaNombre}</p>
-                                        </div>
+                                    <div key={usuario.id} className="datos-usuario">
+                                        <p>Id: {usuario.id}</p>
+                                        <p>Nombres: {usuario.nombres}</p>
+                                        <p>Apellidos: {usuario.apellidos}</p>
+                                        <p>Area: {usuario.area.areaNombre}</p>
                                     </div>
                                 )
                             })
                         }
-                    </ul>
+                    </div>
                 )
             }
         </div>

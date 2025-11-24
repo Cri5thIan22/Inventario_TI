@@ -10,6 +10,11 @@
 
 .usuarios{
     display: flex;
-    justify-content: center;
     align-items: center;
+}
+
+.datos-usuario{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
