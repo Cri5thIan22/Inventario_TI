@@ -32,6 +32,7 @@ export const ListaUsuario = () => {
                                         <span>Usuario: {usuario.nombres}</span>
                                         <span>Apellidos: {usuario.apellidos}</span>
                                         <span>Email: {usuario.email}</span>
+                                        <span>Contraseña: {usuario.contraseña}</span>
                                         <span>Area: {usuario.area.areaNombre}</span>
                                     </div>
                                     <div className="usuario-accion">

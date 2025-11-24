@@ -230,3 +230,68 @@ li{
     color: var(--color-3);
     line-height: 25px;
 }
+
+.formulario-registro{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-6);
+}
+
+.forms-box{
+    display: flex;
+    flex-wrap: wrap;
+    width: 800px;
+    height: 500px;
+    background-color: var(--color-6);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    padding: 10px;
+}
+
+
+.login-usuario,
+.registro-usuario{
+    flex: 0 0 50%;
+    margin: auto;
+    text-align: center;
+}
+
+.login-usuario form,
+.registro-usuario form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px;
+    margin: 20px;
+}
+
+.login-usuario h2,
+.registro-usuario h2{
+    color: var(--color-3);
+    text-transform: uppercase;
+    font-size: 35px;
+}
+
+.login-usuario form input,
+.registro-usuario form input{
+    padding: 8px 10px;
+    outline: none;
+    letter-spacing: 0px;
+    font-weight: 500;
+    background-color: var(--color-6);
+    color: var(--color-3);
+    border: 1px solid var(--color-7);
+}
+
+.login-usuario form button,
+.registro-usuario form button{
+    padding: 10px;
+    color: var(--color-6);
+    font-size: 14px;
+    font-weight: 500;
+    background-color: var(--color-4);
+    border: none;
+    margin: 20px 0;
+}

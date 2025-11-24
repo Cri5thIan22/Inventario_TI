@@ -53,10 +53,9 @@ const CrearUsuarioForm = () => {
     };
 
 
-    // 4. RENDERIZADO (JSX): Enlaza el estado y las funciones al formulario
     return (
-        <div style={{ padding: '20px', maxWidth: '400px', margin: 'auto', fontFamily: 'Arial' }}>
-            <h2>Registro de Nuevo Usuario</h2>
+        <div className="registro-usuario">
+            <h2>Registrate</h2>
             
             {mensaje && (
                 <p style={{ color: mensaje.startsWith('❌') ? 'red' : 'green', border: '1px solid', padding: '10px' }}>
@@ -65,17 +64,17 @@ const CrearUsuarioForm = () => {
             )}
 
             {/* Enlazar la función handleSubmit al evento onSubmit */}
-            <form onSubmit={handleSubmit} style={{ display: 'grid', gap: '10px' }}>
+            <form onSubmit={handleSubmit}>
                 
                 {/* NOTA: Cada input usa name, value y onChange */}
                 
-                <input type="text" name="nombres" placeholder="Nombres" value={usuario.nombres} onChange={handleChange} required style={{ padding: '8px' }}/>
-                <input type="text" name="apellidos" placeholder="Apellidos" value={usuario.apellidos} onChange={handleChange} required style={{ padding: '8px' }}/>
-                <input type="email" name="email" placeholder="Correo Electrónico" value={usuario.email} onChange={handleChange} required style={{ padding: '8px' }}/>
-                <input type="password" name="contraseña" placeholder="Contraseña" value={usuario.contraseña} onChange={handleChange} required style={{ padding: '8px' }}/>
-                <input type="text" name="area" placeholder="Área de Asignación" value={usuario.area} onChange={handleChange} required style={{ padding: '8px' }}/>
+                <input type="text" name="nombres" placeholder="Nombres" value={usuario.nombres} onChange={handleChange} required/>
+                <input type="text" name="apellidos" placeholder="Apellidos" value={usuario.apellidos} onChange={handleChange} required/>
+                <input type="email" name="email" placeholder="Correo Electrónico" value={usuario.email} onChange={handleChange} required/>
+                <input type="password" name="contraseña" placeholder="Contraseña" value={usuario.contraseña} onChange={handleChange} required/>
+                <input type="text" name="area" placeholder="Área de Asignación" value={usuario.area} onChange={handleChange} required/>
 
-                <button type="submit" disabled={cargando} style={{ padding: '10px', backgroundColor: '#007bff', color: 'white', border: 'none', cursor: 'pointer' }}>
+                <button type="submit" disabled={cargando}>
                     {cargando ? 'Registrando...' : 'Registrar Usuario'}
                 </button>
             </form>

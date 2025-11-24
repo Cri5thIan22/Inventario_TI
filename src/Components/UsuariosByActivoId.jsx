@@ -46,10 +46,12 @@ const UsuariosByActivoId = () => {
                             usuarios.map(usuario => {
                                 return (
                                     <div key={usuario.id} className="datos-usuario">
-                                        <p>Id: {usuario.id}</p>
-                                        <p>Nombres: {usuario.nombres}</p>
-                                        <p>Apellidos: {usuario.apellidos}</p>
-                                        <p>Area: {usuario.area.areaNombre}</p>
+                                        <div className="id-usuario">{usuario.id}</div>
+                                        <div className="info-usuario">
+                                            <p>Nombres: {usuario.nombres}</p>
+                                            <p>Apellidos: {usuario.apellidos}</p>
+                                            <p>Area: {usuario.area.areaNombre}</p>
+                                        </div>
                                     </div>
                                 )
                             })

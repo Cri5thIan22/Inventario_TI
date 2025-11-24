@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Bus from '../images/bus.png';
 import CrearUsuarioForm from '../Components//CrearUsuario';
+import LoginUsuario from '../Components/LoginUsuario';
 
 export const BodySend = () => {
 
@@ -78,10 +79,12 @@ export const BodySend = () => {
                     </div>
                 </div>
             </div>
-            
+
             <div className="formulario-registro">
-                <h2>Crea tu cuenta</h2>
-                <CrearUsuarioForm />
+                <div className="forms-box">
+                    <CrearUsuarioForm />
+                    <LoginUsuario />
+                </div>
             </div>
         </section>
     );
