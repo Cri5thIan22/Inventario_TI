@@ -24,7 +24,6 @@ function App() {
               <Route path='/usuario/:usuarioId/activos' element={<ActivosAsignados />}></Route>
               <Route path='/activo/:activoId/detalles' element={<DetallesActivo />}></Route>
               <Route path='/activo/:activoId/usuarios' element={<UsuariosByActivoId />}></Route>
-              
             </Routes>
           </div>
         </BrowserRouter>

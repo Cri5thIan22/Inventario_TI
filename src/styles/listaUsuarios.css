@@ -14,7 +14,7 @@
 
 .usuario{
     padding: 10px 15px;
-    box-shadow: 0 0 4px var(--color-3);
+    box-shadow: 0 0 4px 4px var(--color-7);
 }
 
 .informacion-usuario{
@@ -40,6 +40,6 @@
 }
 
 .usuario-accion a:hover{
-    color: var(--color-4);
     background-color: var(--color-2);
+    color: var(--color-6);
 }

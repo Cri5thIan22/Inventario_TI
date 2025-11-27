@@ -36,8 +36,8 @@ export const ListaUsuario = () => {
                                         <span>Area: {usuario.area.areaNombre}</span>
                                     </div>
                                     <div className="usuario-accion">
-                                        <Link to={`/usuario/${usuario.id}/activos`}>Activos</Link>
-                                        <Link>Informes</Link>
+                                        <Link to={`/usuario/${usuario.id}/activos`}>Ver activos</Link>
+                                        <Link>Ver informes</Link>
                                     </div>
                                 </div>
                             )
