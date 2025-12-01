@@ -3,7 +3,7 @@ import { useState } from "react";
 import AuthService from "../Services/AuthService";
 
 const LoginUsuario = () => {
-    // 1. CORRECCIÓN: 'const' en lugar de 'comst'
+    // 1. CORRECCIÓN: 'const' en lugar de 'comst'   
     const [usuariolog, setLogUsuario] = useState({
         email: '',
         contraseña: ''
